@@ -2,12 +2,6 @@
 
 // Array de palabras
 var palabras = [["atlantico", "Un océano"],
- ["ordenador", "Una máquina"], 
- ["laurel", "Un árbol"], 
- ["plaza", "Espacio público"], 
- ["rueda", "Gran invento"], 
- ["petanca", "Un juego"], 
- ["higuera", "Un árbol"], 
  ["everest", "Un monte"], 
  ["relampago", "Antecede al trueno"], 
  ["jirafa", "Un animal"], 
@@ -23,16 +17,13 @@ var palabras = [["atlantico", "Un océano"],
  ["guitarra", "Instrumento musical"],
  ["piano", "Instrumento musical"],
  ["trompeta", "Instrumento musical"],
- ["españa", "Un país"],
  ["portugal", "Un país"],
  ["telefono", "Un aparato"],
  ["espejo","Reflejo"]]
 
-
-
 var palabra = "";
 
-var rand;
+var rand = 0;
 
 var oculta = [];
 
@@ -46,7 +37,7 @@ var btnInicio = document.getElementById("reset");
 
 
 function generaPalabra() {
-  rand = (Math.random() * 19).toFixed(0);
+  rand = (Math.random() * palabras.length).toFixed(0);
   palabra = palabras[rand][0].toUpperCase();
   console.log(palabra);
 }
@@ -58,7 +49,7 @@ function pintarGuiones(num) {
   hueco.innerHTML = oculta.join("");
 }
 
-function generaABC (a,z) {
+function generarAbcdario (a,z) {
   document.getElementById("abcdario").innerHTML = "";
   var i = a.charCodeAt(0), j = z.charCodeAt(0);
   var letra = "";
@@ -86,7 +77,6 @@ function intento(letra) {
     document.getElementById("intentos").innerHTML = cont;
     document.getElementById("acierto").innerHTML = "Fallo!";
     document.getElementById("acierto").className += "acierto rojo";
-    document.getElementById("image"+cont).className += "fade-in";
   }
   compruebaFin();
   setTimeout(function () { 
@@ -111,6 +101,7 @@ function compruebaFin() {
   }else if( cont == 0 ) {
     document.getElementById("msg-final").innerHTML = "Game Over";
     document.getElementById("msg-final").className += "zoom-in";
+    setTimeout(alert("La palabra era: "+palabra), 800);
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
@@ -122,7 +113,7 @@ function compruebaFin() {
 function inicio() {
   generaPalabra();
   pintarGuiones(palabra.length);
-  generaABC("a","z");
+  generarAbcdario("a","z");
   cont = 6;
   document.getElementById("intentos").innerHTML=cont;
 }

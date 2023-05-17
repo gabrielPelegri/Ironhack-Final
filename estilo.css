@@ -9,7 +9,6 @@
   h1.titulo {
     margin: 50px auto 80px auto;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
   }
   h1#msg-final {
     text-align: center;
@@ -19,9 +18,7 @@
     min-height: 50px;
     margin-bottom: 0;
   }
-  .zoom-in {
-    transform: scale(1) !important;
-  }
+ 
   #acierto {
     text-align: center;
     min-height: 24px;
