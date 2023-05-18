@@ -4,14 +4,13 @@ Trabajo final de Ironhack realizado por Gabriel Giovanni Pelegri Riis
 
 juego.html:
 
-Compuesto por dos H1, uno que indica las instrucciones y un segundo que solo aparece al finalizar el juego.
-El resto del html está dividido en dos columnas dentro de un flex row.
-Hay dos botones con funciones definidas en el archivo js.
+- Compuesto por dos H1, uno que indica las instrucciones y un segundo que solo aparece al finalizar el juego.
+- El resto del html está dividido en dos columnas dentro de un flex row.
+- Hay dos botones con funciones definidas en el archivo js.
 
 script.js:
-En una lista hay definidas varias palabras asociadas a su correspondiente pista
-Después defino varias variables que serán utilizadas más adelante
-
+- En una lista hay definidas varias palabras asociadas a su correspondiente pista
+- Después defino varias variables que serán utilizadas más adelante
 - La función generaPalabra genera un número aleatorio y luego lo utiliza para obtener una pañabra de la lista de palabras.
 - La función pintarGuiones tiene como parámetro la longitud de la variable "palabra", y sirve para pintar los huecos.
 - La función generaAbcdario con los parámetros "a" y "z" para definir de que letra a qué letra se mostrará a través del bucle. He definido dentro
